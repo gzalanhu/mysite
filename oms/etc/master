@@ -1,0 +1,21 @@
+interface: 0.0.0.0
+ipv6: False
+publish_port: 4505
+user: root
+worker_threads: 20
+ret_port: 4506
+pidfile: /var/run/salt-master.pid
+pki_dir: /etc/salt/pki
+cachedir: /var/cache/salt
+log_file: /var/log/salt/master.log
+key_logfile: /var/log/salt/keys.log
+file_recv: True
+pillar_root:
+    base:
+       - /srv/pillar
+
+file_roots:
+    base:
+       - /srv/salt
+
+log_level: debug
